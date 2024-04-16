@@ -321,5 +321,21 @@ public class MainActivity extends Activity {
                 }
             });
     }
+    
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+        case KeyEvent.KEYCODE_VOLUME_DOWN:
+            Log.i("MyApp", "Down");
+            return true;
+        case KeyEvent.KEYCODE_VOLUME_UP:
+            Log.i("MyApp", "Up");
+            return true;
+        case KeyEvent.KEYCODE_VOLUME_MUTE:
+            Log.i("MyApp", "Mute");
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
 
